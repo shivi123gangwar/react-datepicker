@@ -14,7 +14,7 @@ class MonthDate extends React.Component {
     const firstOfMonth = new Date(year, month, 1);
     const firstDayOfWeek = firstOfMonth.getDay();
     let weekDateArr = [[]];
-    const lastOfMonth = new Date(year, month + 1, 1);
+    const lastOfMonth = new Date(year, month + 1, 0);
     const lastDayOfMonth = lastOfMonth.getDay();
     let dateArr = weekDateArr[0];
 
@@ -38,8 +38,10 @@ class MonthDate extends React.Component {
       dateArr.push(currentDate.getDate());
       currentDate = new Date(year, month, currentDate.getDate() + 1);
     }
-    for (let j = lastDayOfMonth; j <= 7; j++) {
-      dateArr.push(null);
+    if (dateArr.length !== WEEK_LENGTH) {
+      for (let j = lastDayOfMonth + 1; j <= 7; j++) {
+        dateArr.push(null);
+      }
     }
     while (dateArr.length < 7) {
       dateArr.push(currentDate.getDate());
@@ -52,8 +54,8 @@ class MonthDate extends React.Component {
 
   render() {
     const months = this.props.month;
-    console.log(this.getMonthDate(2, 2020));
-    console.log(months);
+    console.log(this.getMonthDate(1, 2020));
+    console.log(this.state.month);
     // for (let item = 0; item < this.props.month.length; item++) {
 
     // var weekLists = this.getMonthDate(item, this.state.year);
@@ -63,7 +65,6 @@ class MonthDate extends React.Component {
       {
         console.log(month);
         weekLists = this.getMonthDate(index, this.state.year);
-        console.log(weekLists);
       }
 
       return (
@@ -78,7 +79,7 @@ class MonthDate extends React.Component {
             >
               {weekLists.map((weekList, index) => (
                 <div className="date-container" key={index}>
-                  {weekList.map((weekDate) => (
+                  {weekList.map((weekDate, index) => (
                     <span
                       className={
                         weekDate === this.state.todayDate
