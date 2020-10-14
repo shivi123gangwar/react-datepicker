@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-datepicker/static/css/main.73576a82.chunk.css",
+    "main.js": "/react-datepicker/static/js/main.f8b97a20.chunk.js",
+    "main.js.map": "/react-datepicker/static/js/main.f8b97a20.chunk.js.map",
+    "runtime-main.js": "/react-datepicker/static/js/runtime-main.4a0633ab.js",
+    "runtime-main.js.map": "/react-datepicker/static/js/runtime-main.4a0633ab.js.map",
+    "static/js/2.dc57a30d.chunk.js": "/react-datepicker/static/js/2.dc57a30d.chunk.js",
+    "static/js/2.dc57a30d.chunk.js.map": "/react-datepicker/static/js/2.dc57a30d.chunk.js.map",
+    "index.html": "/react-datepicker/index.html",
+    "precache-manifest.159077f0208d270056ecf5348e618511.js": "/react-datepicker/precache-manifest.159077f0208d270056ecf5348e618511.js",
+    "service-worker.js": "/react-datepicker/service-worker.js",
+    "static/css/main.73576a82.chunk.css.map": "/react-datepicker/static/css/main.73576a82.chunk.css.map",
+    "static/js/2.dc57a30d.chunk.js.LICENSE.txt": "/react-datepicker/static/js/2.dc57a30d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a0633ab.js",
+    "static/js/2.dc57a30d.chunk.js",
+    "static/css/main.73576a82.chunk.css",
+    "static/js/main.f8b97a20.chunk.js"
+  ]
+}
