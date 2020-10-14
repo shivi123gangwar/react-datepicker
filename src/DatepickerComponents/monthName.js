@@ -20,8 +20,8 @@ class MonthName extends React.Component {
   ];
   state = {
     activeIndex: 0,
-    currentMonth: "",
-    month: new Date().getMonth(),
+    // currentMonth: "",
+    // month: new Date().getMonth(),
     year: new Date().getFullYear(),
   };
   slideWidth = () => {
@@ -29,12 +29,11 @@ class MonthName extends React.Component {
   };
   goToPrevSlide = () => {
     if (this.state.activeIndex === 0) {
-      this.setState({
+      return this.setState({
         activeIndex: this.months.length - 1,
         translateValue: this.state.translateValue + -this.slideWidth(),
       });
     }
-
     this.setState(() => ({
       activeIndex: this.state.activeIndex - 1,
       translateValue: this.state.translateValue + this.slideWidth(),
@@ -55,11 +54,9 @@ class MonthName extends React.Component {
   };
 
   render() {
-    console.log(this.state.activeIndex);
     return (
       <div className="datepickerContainer">
         <div className="datepicker-month">
-          {this.getCurrentMonth}
           {this.months.map((month, index) => (
             <div>
               <h3
